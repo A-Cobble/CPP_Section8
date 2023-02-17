@@ -15,6 +15,17 @@ int main() {
 
 		+,-,*, and / operators are overloaded to work with multiple types such as int, double, etc.
 		% only works for integer types
+
+		++ increment operator
+		-- decrement operator
+
+		++ and -- can be used with integers, floating point types and pointers
+		
+		2 different varients
+		Prefix ++num
+		Postfix num++
+		
+		Never use ++ or -- twice for the same variable in the same statement
 	*/
 
 	/*int num1{ 200 };
@@ -54,7 +65,7 @@ int main() {
 
 	 cout << 5.0 / 10.0 << endl;*/
 
-	const double usd_per_euro{ 1.07 };
+	/*const double usd_per_euro{ 1.07 };
 
 	cout << "Welcome to the Euro to USD converter" << endl;
 	cout << "Enter the value in EUR:";
@@ -66,6 +77,67 @@ int main() {
 	dollars = euros * usd_per_euro;
 
 	cout << euros << " euros is equivalent to " << dollars << " dollars." << endl;
+
+	cout << endl;*/
+
+
+
+
+
+	//Example 1 = simple increment
+	int counter{ 10 };
+	int result{ 0 };
+
+	cout << "counter: " << counter << endl;
+
+	counter = counter + 1;
+	cout << "counter: " << counter << endl;
+
+	counter++;
+	cout << "counter: " << counter << endl;
+
+	++counter;
+	cout << "counter: " << counter << endl;
+
+	//Example 2 = pre-increment
+	counter = 10;
+	result = 0;
+
+	cout << "Counter: " << counter << endl;
+	result = ++counter; // Note the pre-increment
+	cout << "Counter: " << counter << endl;
+	cout << "Result: " << result << endl;
+
+	//Example 3 = post-increment
+	counter = 10;
+	result = 0;
+
+	cout << "Counter: " << counter << endl;
+
+	result = counter++;  // Note the post-increment
+	cout << "Counter: " << counter << endl;
+	cout << "Result: " << result << endl;
+
+	//Example 4
+	counter = 10;
+	result = 0;
+
+	cout << "Counter: " << counter << endl;
+
+	result = ++counter + 10; // Note the pre-increment
+	cout << "Counter: " << counter << endl;
+	cout << "Result: " << result << endl;
+
+	//Example 5
+	counter = 10;
+	result = 0;
+
+	cout << "Counter: " << counter << endl;
+
+	result = counter++ + 10; // Note the post-increment
+
+	cout << "Counter: " << counter << endl;
+	cout << "Result: " << result << endl;
 
 	cout << endl;
 
