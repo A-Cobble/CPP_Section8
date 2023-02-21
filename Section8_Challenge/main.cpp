@@ -35,7 +35,17 @@ int main() {
 	int nickel{ 0 };
 	int penny{ 0 };
 
-	while (change > 0) {
+	dollar = change / 100;
+	change =  change % 100;
+	quarter = change / 25;
+	change = change % 25;
+	dime = change / 10;
+	change = change % 10;
+	nickel = change / 5;
+	change = change % 5;
+	penny = change;
+
+	/*while (change > 0) {
 		if ((change - 100) >= 0) {
 			change -= 100;
 			dollar++;
@@ -56,7 +66,7 @@ int main() {
 			change -= 1;
 			penny++;
 		}
-	}
+	}*/
 
 	cout << "You entered " << number << ". That is " << dollar << " dollars, " << quarter << " quarters, " << dime << " dimes, " << nickel << " nickels, and " << penny << " pennies. Have a great day!" << endl;
 
